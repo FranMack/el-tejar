@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Left content */}
           <div className="animate-fade-in space-y-8">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
                 Sonrisa Radiante, Salud Garantizada
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
