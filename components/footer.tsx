@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -10,9 +10,14 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary-foreground/20 rounded-lg flex items-center justify-center font-bold text-primary-foreground">
-                EL
-              </div>
+              <div className="w-10 h-10 bg-primary-foreground/20 rounded-lg flex items-center justify-center text-white font-bold relative">
+                           <Image
+                             src="/muela.png"
+                             alt="El Tejar Logo"
+                             fill
+                             className="object-contain p-2"
+                           />
+                         </div>
               <h3 className="text-xl font-bold">El Tejar</h3>
             </div>
             <p className="text-primary-foreground/80">

@@ -1,30 +1,35 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'Inicio', href: '#hero' },
-    { label: 'Servicios', href: '#services' },
-    { label: 'Odontólogo', href: '#about' },
-    { label: 'Instalaciones', href: '#installations' },
-    { label: 'Casos de Éxito', href: '#cases' },
-    { label: 'Horarios', href: '#schedule' },
-    { label: 'Contacto', href: '#contact' },
+    { label: "Inicio", href: "#hero" },
+    { label: "Servicios", href: "#services" },
+    { label: "Odontólogo", href: "#about" },
+    { label: "Instalaciones", href: "#installations" },
+    { label: "Casos de Éxito", href: "#cases" },
+    { label: "Horarios", href: "#schedule" },
+    { label: "Contacto", href: "#contact" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-primary/10">
+    <nav className="fixed top-0 z-50 w-full bg-white shadow-sm border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold">
-              EL
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold relative">
+              <Image
+                src="/muela.png"
+                alt="El Tejar Logo"
+                fill
+                className="object-contain p-2"
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-primary">El Tejar</h1>
