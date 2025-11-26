@@ -31,7 +31,7 @@ const Navbar = () => {
                 className="object-contain p-2"
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="">
               <h1 className="text-xl font-bold text-primary">El Tejar</h1>
               <p className="text-xs text-muted-foreground">Clínica Dental</p>
             </div>
