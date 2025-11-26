@@ -17,7 +17,8 @@ export const metadata: Metadata = {
     "La Clínica Dental El Tejar, dirigida por el Dr. Luciano Mackinnon, ofrece tratamientos odontológicos de alta calidad en Fuengirola, España. Especializados en estética dental, implantes, ortodoncia y rehabilitación oral.",
   keywords:
     "clínica dental Fuengirola, dentista Fuengirola, odontólogo Luciano Mackinnon, estética dental, implantes dentales, ortodoncia, blanqueamiento dental, rehabilitación oral, salud bucal",
-  robots: "index, follow",
+  //robots: "index, follow",
+  robots: envs.DOMAIN.includes("vercel.app") ? "noindex, nofollow" : "index, follow",
 
   openGraph: {
     title: "Clínica Dental El Tejar - Odontología en Fuengirola",
