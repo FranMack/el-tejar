@@ -7,7 +7,7 @@ const Hero2 = () => {
   return (
     <section
       id="hero"
-      className="sticky w-full min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="sticky w-full min-h-screen flex items-center justify-center overflow-hidden sm:pt-20"
     >
       {/* Background gradient */}
       <Image
