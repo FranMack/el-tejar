@@ -100,6 +100,36 @@ const SuccessCases = () => {
                         />
                       </div>
                     </div>
+                    {/* Mobile navigation */}
+                    <div className="md:hidden flex gap-15 justify-center mt-3">
+                      <button
+                        onClick={prevSlide}
+                        className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
+                      >
+                        <ChevronLeft size={20} />
+                      </button>
+                      <button
+                        onClick={nextSlide}
+                        className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
+                      >
+                        <ChevronRight size={20} />
+                      </button>
+                    </div>
+                    {/* Dots */}
+                    <div className="flex sm:hidden gap-2 justify-center mt-2">
+                      {cases.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentSlide(index)}
+                          className={`h-2 rounded-full transition-all duration-300 ${
+                            index === currentSlide
+                              ? "bg-primary w-8"
+                              : "bg-primary/30 w-2 hover:bg-primary/50"
+                          }`}
+                          aria-label={`Ir a caso ${index + 1}`}
+                        />
+                      ))}
+                    </div>
                   </div>
 
                   {/* Case title */}
@@ -128,24 +158,8 @@ const SuccessCases = () => {
             <ChevronRight size={24} />
           </button>
 
-          {/* Mobile navigation */}
-          <div className="md:hidden flex gap-3 justify-center mt-8">
-            <button
-              onClick={prevSlide}
-              className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-2 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-colors"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-
           {/* Dots */}
-          <div className="flex gap-2 justify-center mt-8">
+          <div className="hidden sm:flex gap-2 justify-center mt-8">
             {cases.map((_, index) => (
               <button
                 key={index}
