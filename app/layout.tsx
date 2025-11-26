@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   keywords:
     "clínica dental Fuengirola, dentista Fuengirola, odontólogo Luciano Mackinnon, estética dental, implantes dentales, ortodoncia, blanqueamiento dental, rehabilitación oral, salud bucal",
   //robots: "index, follow"//,
-  robots: envs.DOMAIN.includes("vercel.app") ? "noindex, nofollow" : "index, follow",
+ robots: (envs.DOMAIN ?? "").includes("vercel.app")
+  ? "noindex, nofollow"
+  : "index, follow",
 
   openGraph: {
     title: "Clínica Dental El Tejar - Odontología en Fuengirola",
